@@ -38,7 +38,7 @@ public class ContactManager implements Program {
 				+ "메뉴 선택 : ");
 	}
 
-		@Override
+	@Override
 	public void run() {
 		String fileName = "src/day17/contact/contact.txt";
 		
