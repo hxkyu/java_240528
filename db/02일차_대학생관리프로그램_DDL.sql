@@ -72,3 +72,4 @@ CREATE TABLE IF NOT EXISTS contact(
 	ct_st_num char(10) not null,
     foreign key(ct_st_num) references student(st_num)
 );
+# 이름수정해서 커밋
