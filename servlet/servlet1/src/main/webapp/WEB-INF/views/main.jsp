@@ -8,5 +8,9 @@
 </head>
 <body>
 	<h1>메인 페이지</h1>
+	<p>안녕하세요. 제 이름은 ${name}입니다.</p>
+	<!-- person.name은 실제로 person.getName()을 호출 -->
+	<p>만나서 반갑습니다. 제 이름은 ${person.name}이고, 나이는 ${person.age}살입니다.</p>
+	<p> 왜나만 !!!! 아악!! ${person.name}안돼 ${person.name}</p>
 </body>
 </html>
