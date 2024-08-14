@@ -32,15 +32,14 @@ public class Signup extends HttpServlet {
 		LoginDTO member = new LoginDTO(id, pw, email);
 		
 		if(memberService.signup(member)) {
-			request.setAttribute("msg", "회원가입에 성공했습니다");
+			request.setAttribute("msg", "회원 가입에 성공했습니다.");
 			request.setAttribute("url", "/");
-		
-			}else {
-			request.setAttribute("msg",  "회원가입에 실패했습니다");
+		}else {
+			request.setAttribute("msg", "회원 가입에 실패했습니다.");
 			request.setAttribute("url", "/signup");
 		}
-	request.getRequestDispatcher("/WEB-INF/views/message.jsp").forward(request, response);
-	
+		request.getRequestDispatcher("/WEB-INF/views/message.jsp").forward(request, response);
+		
 	}
 
 }

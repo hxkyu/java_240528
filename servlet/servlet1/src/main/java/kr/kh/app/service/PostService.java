@@ -1,0 +1,54 @@
+package kr.kh.app.service;
+
+import java.util.List;
+
+import kr.kh.app.model.vo.CommentVO;
+import kr.kh.app.model.vo.CommunityVO;
+import kr.kh.app.model.vo.MemberVO;
+import kr.kh.app.model.vo.PostVO;
+import kr.kh.app.model.vo.RecommendVO;
+import kr.kh.app.pagination.Criteria;
+import kr.kh.app.pagination.PageMaker;
+
+public interface PostService {
+
+	List<CommunityVO> getCommunityList();
+
+	CommunityVO getCommunity(int coNum);
+
+	List<PostVO> getPostList(Criteria cri);
+
+	PageMaker getPageMaker(Criteria cri, int displayPageNum);
+
+	boolean insertPost(CommentVO comment);
+
+	PostVO getPost(int num);
+
+	void updatePostView(int num);
+
+	PostVO getPost(int po_num, MemberVO user);
+
+	boolean updatePost(PostVO post, MemberVO user);
+
+	boolean deletePost(String po_num, MemberVO user);
+
+	int insertRecommend(RecommendVO recommend);
+
+	RecommendVO getRecommend(int num, MemberVO user);
+
+	List<CommentVO> getCommentList(Criteria cri);
+
+	PageMaker getCommentPageMaker(Criteria cri);
+
+
+	boolean insetComment(CommentVO comment);
+
+	boolean insertComment(CommentVO comment);
+
+	boolean deleteComment(int co_num, MemberVO user);
+
+	boolean insertPost(PostVO post);
+
+	boolean updateComment(CommentVO comment, MemberVO user);
+
+}

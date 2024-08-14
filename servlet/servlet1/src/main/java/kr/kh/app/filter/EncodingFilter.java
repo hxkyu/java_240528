@@ -10,11 +10,9 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpFilter;
 
-@WebFilter("/")
+@WebFilter("/*")
 public class EncodingFilter extends HttpFilter implements Filter {
        
-	private static final long serialVersionUID = 1L;
-
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		//화면에서 서버로 전송할 때
 		request.setCharacterEncoding("UTF-8");
