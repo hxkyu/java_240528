@@ -1,11 +1,5 @@
-/**
- * 
- */
 package day09;
 
-/**
- * 
- */
 public class ClassEx01 {
 
 	public static void main(String[] args) {
@@ -53,3 +47,6 @@ class Student1{
 		System.out.println(grade + "학년 " + classNum + "반 " + num +"번 " + name);
 	}
 }
+
+
+

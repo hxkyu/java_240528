@@ -146,7 +146,7 @@ public class PhoneEx01 {
 		System.out.println("2. 연락처 수정");
 		System.out.println("3. 연락처 삭제");
 		System.out.println("4. 연락처 검색");
-		System.out.println("5. 프로그램 종료");
+		System.out.println("5. 프로그램 정료");
 		System.out.print("메뉴 선택 : ");
 	}
 	/**
@@ -172,6 +172,7 @@ public class PhoneEx01 {
 			search(list, count);
 			break;
 		case 5:
+			System.out.println("프로그램을 종료합니다.");
 			break;
 		default:
 			System.out.println("잘못된 메뉴입니다.");
@@ -272,7 +273,7 @@ public class PhoneEx01 {
 		if(index < 0 || index >= count) {
 			return false;
 		}
-		return list[index].getName().equals(name);
+		return list[index].getName().contains(name);
 	}
 	/**
 	 * 기능 : 연락처 리스트에서 연락처 입력받아를 수정하는 메소드
@@ -424,6 +425,7 @@ class Contact{
 	}
 	
 }
+
 
 
 

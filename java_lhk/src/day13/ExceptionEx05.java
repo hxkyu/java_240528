@@ -35,3 +35,4 @@ class MyException extends Exception{
 		return who + " : " + super.getMessage();
 	}
 }
+

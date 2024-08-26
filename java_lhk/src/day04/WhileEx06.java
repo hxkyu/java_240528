@@ -11,7 +11,7 @@ public class WhileEx06 {
 		 * 		 =>12를 i로 나누었을 때 나머지가 0과 같다면 i를 출력
 		 * 반복문 종료 후 : 없음
 		 * */
-
+		
 		int i = 1;
 		int num = 9;
 		System.out.print(num + "의 약수 : ");

@@ -5,46 +5,44 @@ import java.util.Scanner;
 public class Exam01 {
 
 	public static void main(String[] args) {
-
-		/*
-		 * 다음 메뉴를 출력하고 메뉴를 선택하면 안내 문구를 출력하는 코드를 작성하세요.
+		/* 다음 메뉴를 출력하고 메뉴를 선택하면 안내문구를 
+		 * 출력하는 코드를 작성하세요.
 		 * 메뉴
 		 * 1. 추가
 		 * 2. 검색
 		 * 3. 종료
 		 * 메뉴 선택 : 1
-		 * ----------
+		 * -----------
 		 * 추가했습니다.
-		 * ----------
+		 * -----------
 		 * 메뉴
 		 * 1. 추가
 		 * 2. 검색
 		 * 3. 종료
 		 * 메뉴 선택 : 2
-		 * ----------
+		 * -----------
 		 * 검색했습니다.
-		 * ----------
+		 * -----------
 		 * 메뉴
 		 * 1. 추가
 		 * 2. 검색
 		 * 3. 종료
 		 * 메뉴 선택 : 0
-		 * ----------
+		 * -----------
 		 * 잘못된 메뉴입니다.
-		 * ----------
+		 * -----------
 		 * 메뉴
 		 * 1. 추가
 		 * 2. 검색
 		 * 3. 종료
 		 * 메뉴 선택 : 3
-		 * ----------
+		 * -----------
 		 * 프로그램을 종료합니다.
-		 * ----------
-		 */
-		
+		 * -----------
+		 * */
+
 		Scanner scan = new Scanner(System.in);
 		int menu;
-		
 		do {
 			System.out.println("메뉴");
 			System.out.println("1. 추가");
@@ -52,62 +50,31 @@ public class Exam01 {
 			System.out.println("3. 종료");
 			System.out.print("메뉴 선택 : ");
 			menu = scan.nextInt();
-			
-			
-			
-			// switch문으로 작성한 예제
-			System.out.println("switch문으로 작성한 예제");
-			switch(menu){
+
+			switch(menu) {
 			case 1:
-				System.out.println("----------");
-				System.out.println("추가했습니다.");
-				System.out.println("----------");
+				System.out.println("-----------");
+				System.out.println("추가 했습니다.");
+				System.out.println("-----------");
 				break;
 			case 2:
-				System.out.println("----------");
-				System.out.println("검색했습니다.");
-				System.out.println("----------");
+				System.out.println("-----------");
+				System.out.println("검색 했습니다.");
+				System.out.println("-----------");
 				break;
 			case 3:
-				System.out.println("----------");
+				System.out.println("-----------");
 				System.out.println("프로그램을 종료합니다.");
-				System.out.println("----------");
+				System.out.println("-----------");
 				break;
 			default:
-				System.out.println("----------");
+				System.out.println("-----------");
 				System.out.println("잘못된 메뉴입니다.");
-				System.out.println("----------");
+				System.out.println("-----------");
 				break;
 			}
-			
-			
-			
-			// if문으로 작성한 예제
-			System.out.println("if문으로 작성한 예제");
-			if(menu == 1) {
-				System.out.println("----------");
-				System.out.println("추가했습니다.");
-				System.out.println("----------");
-				break;
-			}else if(menu == 2) {
-				System.out.println("----------");
-				System.out.println("검색했습니다.");
-				System.out.println("----------");
-				break;
-			}else if(menu == 3) {
-				System.out.println("----------");
-				System.out.println("프로그램을 종료합니다.");
-				System.out.println("----------");
-				break;
-			}else {
-				System.out.println("----------");
-				System.out.println("잘못된 메뉴입니다.");
-				System.out.println("----------");
-			}
-			
-			
+
 		}while(menu != 3);
-
 	}
-}
 
+}

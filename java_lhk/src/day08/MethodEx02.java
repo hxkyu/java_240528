@@ -1,6 +1,7 @@
 package day08;
 
 public class MethodEx02 {
+
 	public static void main(String[] args) {
 		/* 두 수의 최대 공약수와 최소 공배수를 구하는 코드를 작성하세요. 단, 메서드 이용.*/
 		int num1 = 8, num2 = 12;

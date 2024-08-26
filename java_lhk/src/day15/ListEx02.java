@@ -6,6 +6,7 @@ import java.util.Iterator;
 public class ListEx02 {
 
 	public static void main(String[] args) {
+		//List 반복문 예제
 		ArrayList<String> list = new ArrayList<String>();
 		
 		list.add("hi");
@@ -13,20 +14,21 @@ public class ListEx02 {
 		list.add("banana");
 		
 		for(String tmp : list) {
-			System.out.println(tmp + " ");
+			System.out.print(tmp + " ");
 		}
 		System.out.println();
-		
+
 		Iterator<String> it = list.iterator();
+		
 		while(it.hasNext()) {
 			String tmp = it.next();
-			System.out.println(tmp + " ");
+			System.out.print(tmp + " ");
 		}
 		System.out.println();
 		
 		for(int i = 0; i<list.size(); i++) {
 			String tmp = list.get(i);
-			System.out.println(tmp + " ");
+			System.out.print(tmp + " ");
 		}
 	}
 

@@ -46,3 +46,4 @@ class Child22 extends Parent2{
 		System.out.println("num1 : " + num + ", num2 : " + num2);
 	}
 }
+

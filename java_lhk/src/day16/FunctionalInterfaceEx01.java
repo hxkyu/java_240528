@@ -18,7 +18,7 @@ public class FunctionalInterfaceEx01 {
 		
 		list.add(new Person("홍길동", "1", 21));
 		list.add(new Person("고길동", "2", 40));
-		list.add(new Person("둘리", "3", 1000));
+		list.add(new Person("둘리", "3", 10000));
 		
 		print(list, (c)->{
 			System.out.println(c.getName());
@@ -42,20 +42,20 @@ public class FunctionalInterfaceEx01 {
 		System.out.println(r1);
 		int r2 = randomNumber(()->{
 			int min = 0, max = 500;
-			int r = (int)(Math.random()*(max - min + 1)+ min);
+			int r = (int)(Math.random()*(max - min + 1) + min);
 			return r;
 		});
 		System.out.println(r2);
 		
-		printString(list, (p1)->p1.getName());
-		printString(list, (p1)->p1.getNum());
+		printString(list, (p1)-> p1.getName());
+		printString(list, (p1)-> p1.getNum());
 		
 		System.out.println(list);
-		incteaseAge(list, (p1)->{
+		increaseAge(list, (p1)->{
 			p1.setAge(p1.getAge() + 1);
 			return p1;
 		});
-		System.out.println(list);	
+		System.out.println(list);
 		
 		print2(list, p1->p1.getAge() > 30);
 		print2(list, p1->p1.getName().equals("홍길동"));
@@ -68,35 +68,32 @@ public class FunctionalInterfaceEx01 {
 			}
 		}
 	}
-
-
-	public static void incteaseAge(List<Person> list, UnaryOperator<Person> op) {
+	
+	public static void increaseAge(List<Person> list, UnaryOperator<Person> op) {
 		for(int i = 0; i<list.size(); i++) {
 			list.set(i, op.apply(list.get(i)));
 		}
 	}
-
-
-
-
-	public static void printString(List<Person> list, Function<Person, String > f) {
+	
+	public static void printString(List<Person> list, Function<Person, String> f) {
 		for(Person tmp : list) {
 			System.out.println(f.apply(tmp));
 		}
 	}
+	
 	public static void print(List<Person> list, Consumer<Person> c) {
 		for(Person tmp : list) {
 			c.accept(tmp);
 		}
 	}
-	public static Person randomPerson (Supplier<Person> p) {
+	public static Person randomPerson(Supplier<Person> p) {
 		return p.get();
 	}
 	public static Integer randomNumber(Supplier<Integer> p) {
 		return p.get();
 	}
-	
 }
+
 @Data
 @AllArgsConstructor
 class Person{
@@ -106,7 +103,9 @@ class Person{
 	
 	@Override
 	public String toString() {
-		return num + " " + name + "("+ age + ")";
+		return num + " " + name + "(" + age + ")";
 	}
 	
+	
 }
+

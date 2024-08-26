@@ -43,7 +43,7 @@
 		and po_me_id = #{cri.search}
 		</if>
 	</select>
-	<insert id="insertPost">
+	<insert id="insertPost" useGeneratedKeys="true" keyProperty="post.po_num">
 		insert into post(po_co_num, po_me_id, po_title, po_content)
 		values(#{post.po_co_num},#{post.po_me_id},#{post.po_title},#{post.po_content})
 	</insert>
@@ -121,5 +121,28 @@
 			cm_content = #{cm.cm_content}
 		where 
 			cm_num = #{cm.cm_num}
+	</update>
+	<insert id="insertFile">
+		insert into file(fi_po_num, fi_name, fi_ori_name)
+		values(#{file.fi_po_num},#{file.fi_name},#{file.fi_ori_name})
+	</insert>
+	<select id="selectFileList" resultType="FileVO">
+		select * from file where fi_po_num = #{po_num}
+	</select>
+	<select id="selectFile" resultType="FileVO">
+		select form file where fi_num = #{fi_num}
+	</select>
+	<select id="deleteFile" resultType="FileVO">
+		delete form file where fi_num = #{fi_num}
+	</select>
+	
+	<insert id="insertCommunity">
+		insert into community(co_name) values(#{co_name})
+	</insert>
+	<delete id="deleteCommunity">
+		delete from community where co_num = #{co_num}
+	</delete>
+	<update id="updateCommunity">
+		update community set co_name = #{co_name} where co_num = #{co_num}
 	</update>
 </mapper>

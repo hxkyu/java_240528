@@ -21,3 +21,5 @@ class HighScoolStudent extends Student{
 		System.out.println(birthday);//생일은 접근제어자가 public이어서 자식 클래스에서 사용할 수 있다
 	}
 }
+
+

@@ -6,7 +6,6 @@ public class EnhancedForEx01 {
 		// 배열에 1,2,3,4,5를 저장한 후 향상된 for문을 이용하여 조회하는 예제
 		int [] arr = new int[] {1,2,3,4,5};
 		
-			//자료형 변수명 배열명
 		for(int tmp : arr) {
 			System.out.println(tmp);
 		}
@@ -14,6 +13,7 @@ public class EnhancedForEx01 {
 			int tmp = arr[i];
 			System.out.println(tmp);
 		}
+
 	}
 
 }

@@ -25,7 +25,7 @@ public class PhoneManager implements Program {
 		System.out.println("2. 연락처 수정");
 		System.out.println("3. 연락처 삭제");
 		System.out.println("4. 연락처 검색");
-		System.out.println("5. 프로그램 종료");
+		System.out.println("5. 프로그램 정료");
 		System.out.print("메뉴 선택 : ");
 	}
 
@@ -55,14 +55,13 @@ public class PhoneManager implements Program {
 
 	private void expand() {
 		//다 찼는지 확인해서 안 찼으면 종료
-		if(list.length >count) {
+		if(list.length > count) {
 			return;
 		}
 		//찼으면 10개를 추가
 		Contact[] tmp = new Contact[list.length + 10];
 		System.arraycopy(list, 0, tmp, 0, list.length);
 		list = tmp;
-		
 	}
 
 	private void search() {
@@ -72,6 +71,7 @@ public class PhoneManager implements Program {
 		String name = scan.nextLine();
 		//이름에 맞는 연락처를 출력
 		printContact(name);
+		
 	}
 
 	private void delete() {
@@ -93,7 +93,7 @@ public class PhoneManager implements Program {
 			System.out.println("잘못 선택했습니다.");
 			return;
 		}
-	
+		
 		//번호를 삭제
 		//해당 번지에서 앞으로 한칸씩 당겨줘야 함
 		
@@ -108,7 +108,6 @@ public class PhoneManager implements Program {
 		//연락처 개수를 1감소
 		list[count] = null;
 		System.out.println("연락처를 삭제했습니다.");
-		return;
 		
 	}
 
@@ -140,7 +139,7 @@ public class PhoneManager implements Program {
 		//이름, 번호를 이용하영 객체를 생성
 		Contact contact = new Contact(newName, newNumber);
 		//생성된 객체가 중복된 번호이면 안내문구 출력하고 아니면 객체를 추가
-		if(indexOf(index, contact) >= 0) {
+		if(indexOf(index,contact) >= 0) {
 			System.out.println("이미 등록된 번호입니다.");
 			return;
 		}
@@ -202,15 +201,17 @@ public class PhoneManager implements Program {
 		//등록이 완료되었습니다라고 출력
 		System.out.println("등록이 완료되었습니다.");		
 	}
+
 	private int indexOf(Contact contact) {
-		return indexOf(-1,contact);
+		return indexOf(-1, contact);
 	}
+
 	private int indexOf(int index, Contact contact) {
 		if(list == null || count == 0) {
 			return -1;
 		}
 		for(int i = 0 ; i < count; i++) {
-			if( i == index) {
+			if(i == index) {
 				continue;
 			}
 			if(list[i].equals(contact)) {
@@ -238,7 +239,7 @@ public class PhoneManager implements Program {
 				runMenu(menu);
 			}catch(InputMismatchException e) {
 				System.out.println("메뉴를 잘못 입력 했습니다.");
-				//입력 버퍼에 있는 내용을 비움
+				//입력 버퍼에 있는 내요을 비움
 				scan.next();
 			}catch(Exception e) {
 				System.out.println(e.getMessage());
@@ -252,7 +253,7 @@ public class PhoneManager implements Program {
 	@Override
 	public void load(String fileName) {
 		if(fileName == null) {
-			System.err.println("불러올 파일이 없습니다.");
+			System.out.println("불러올 파일이 없습니다.");
 			list = new Contact[10];
 			return;
 		}

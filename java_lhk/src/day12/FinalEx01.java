@@ -33,3 +33,4 @@ final class Parent2{
 }
 //final 클래스는 부모 클래스가 될 수 없다
 //class Child2 extends Parent2{}
+

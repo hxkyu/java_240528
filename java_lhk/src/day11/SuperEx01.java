@@ -3,12 +3,13 @@ package day11;
 public class SuperEx01 {
 
 	public static void main(String[] args) {
-		Child1 c = new Child1(10, 20);
+		Child1 c = new Child1(10,20);
 		c.printChild();
 
 	}
 
 }
+
 class Parent1{
 	int num = 1;
 	
@@ -18,7 +19,9 @@ class Parent1{
 	public Parent1(int num) {
 		this.num = num;
 	}
+
 }
+
 class Child1 extends Parent1{
 	int num2 = 2;
 	
@@ -32,5 +35,5 @@ class Child1 extends Parent1{
 		super(num1);
 		this.num2 = num2;
 	}
-	
 }
+

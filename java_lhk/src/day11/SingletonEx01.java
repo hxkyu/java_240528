@@ -40,5 +40,4 @@ class Singleton{
 	public void message() {
 		System.out.println("싱글톤입니다.");
 	}
-
 }

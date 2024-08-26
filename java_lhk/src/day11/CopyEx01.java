@@ -14,7 +14,7 @@ public class CopyEx01 {
 		
 		print(list1);
 		print(list2);
-
+		
 		list1[0].num = 100;
 		
 		print(list1);
@@ -31,15 +31,15 @@ public class CopyEx01 {
 		for(int i = 0; i<list3.length; i++) {
 			list4[i] = new C(list3[i]);
 		}
-		
-		System.out.println("-----------");
+		System.out.println("--------------");
 		print(list3);
 		print(list4);
 		
-		list4[0].num = 100;
+		list3[0].num = 100;
 		
 		print(list3);
 		print(list4);
+		
 	}
 	public static void print(C[] list) {
 		for(C tmp : list) {
@@ -47,7 +47,6 @@ public class CopyEx01 {
 		}
 		System.out.println();
 	}
-
 }
 
 class C{
@@ -60,6 +59,6 @@ class C{
 		System.out.print(num+ " ");
 	}
 	public C(C c) {
-		this.num = c.num;//값을 복사
+		this.num = c.num;
 	}
 }

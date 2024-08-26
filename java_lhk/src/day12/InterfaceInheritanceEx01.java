@@ -30,3 +30,4 @@ class ClassB{
 	void test1() {}
 }
 class ClassC extends ClassA{}
+

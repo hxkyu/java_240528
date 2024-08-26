@@ -7,5 +7,4 @@ public class PhoneEx01 {
 		pm.run();
 	}
 
-
 }

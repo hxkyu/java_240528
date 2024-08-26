@@ -1,21 +1,17 @@
 package day02;
 
 public class StringEx01 {
-		//문자열 더하기 예제
-		public static void main(String[] args) {
-			String str1 = 1 + "안녕2";//기본형 + 문자열
-			String str2 = "1안녕" + 2;//문자열 + 기본형
-			
-			//System.out.println(strl);
-			System.out.println(str2);
-			
-			String str3 = 1 + 2 + "3";//정수 1과 2가 더해진 후 문자열 3과 더해지기 때문에 3 + "3"이 되고 결국 "33"이 됨
-			//String str3 = "1" + 2 + 3;//문자열 1과 정수 2가 더해진 후 정수 
-			
-			
-			
 
+	public static void main(String[] args) {
+		String str1 = null;
+		String str2 = "안녕하세요.";
+		String str3 = "null";
+		String str4 = "";//문자열은 0자이상
+		
+		System.out.println(str1);//이 때 출력되는 null은 null이라는 문자열이 저장된게 아니라 null값이 있다는 의미
+		System.out.println(str2);
+		System.out.println(str4);
+		System.out.println(str3);//이 때 출력되는 null은 null이라는 문자열
 	}
 
 }
-
