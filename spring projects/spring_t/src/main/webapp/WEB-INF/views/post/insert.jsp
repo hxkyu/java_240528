@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 </head>
 <body>
-	<h1>게시글 등록</h1>
+	<h1>게시글 상새</h1>
 	<form action="<c:url value="/post/insert"/>" method="post" enctype="multipart/form-data">
 		<div class="form-group">
 			<label for="title">제목:</label>

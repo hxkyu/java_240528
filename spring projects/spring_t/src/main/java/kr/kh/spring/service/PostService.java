@@ -90,4 +90,18 @@ public class PostService {
 		}
 
 	}
+
+	public void updateView(Integer po_num) {
+		postDao.updateView(po_num);//다오한테 요청
+		
+	}
+
+	public PostVO getPost(Integer po_num) {
+		// TODO Auto-generated method stub
+		return postDao.selectPost(po_num);
+	}
+
+	public List<FileVO> getFileList(Integer po_num) {
+		return postDao.selectFileList(po_num);
+	}
 }
