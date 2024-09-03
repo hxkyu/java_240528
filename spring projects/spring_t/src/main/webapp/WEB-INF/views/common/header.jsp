@@ -20,13 +20,14 @@
 			  커뮤니티
 			</a>
 			<div class="dropdown-menu" id="community-list">
+				
 			</div>
 		</li>
-		<c:if test="${user ne null && user.me_authority eq 'ADMIN'}">
-		</c:if>
+		<c:if test="${user ne null && user.me_authority eq 'ADMIN' }">
 			<li class="nav-item">
 				<a class="nav-link" href="<c:url value="/admin/community"/>">커뮤니티 관리</a>
 			</li>
+		</c:if>
 	</ul>
 	<ul class="navbar-nav">
 		<c:if test="${user == null}">
@@ -65,7 +66,7 @@
 		error : function(jqXHR, textStatus, errorThrown){
 	
 		}
-});
+	});
 </script>
 </body>
 </html>

@@ -122,6 +122,7 @@ public class PostController {
 		}
 		return "/main/message";
 	}
+	
 	@ResponseBody
 	@PostMapping("/community/list")
 	public List<CommunityVO> communityList(){

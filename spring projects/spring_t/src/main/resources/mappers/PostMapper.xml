@@ -4,9 +4,9 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.kh.spring.dao.PostDAO">
 	<select id="selectCommunityList" resultType="CommunityVO">
-		select community. *,count(po_co_num) as co_count from community 
-		left join post on co_num = po_co_num <!-- 그냥 조인하면 글안쓴거는 조회안됨 -->
-		group by co_num
+		select community.*,count(po_co_num) as co_count from community 
+		left join post on co_num = po_co_num
+		group by co_num 
 		order by co_num
 	</select>
 	<select id="selectPostList" resultType="PostVO">
@@ -78,4 +78,10 @@
 	<insert id="insertCommunity">
 		insert into community(co_name) values(#{co_name})
 	</insert>
+	<delete id="deleteCommunity">
+		delete from community where co_num = #{co_num}
+	</delete>
+	<update id="updateCommunity">
+		update community set co_name = #{community.co_name} where co_num = #{community.co_num}
+	</update>
 </mapper>

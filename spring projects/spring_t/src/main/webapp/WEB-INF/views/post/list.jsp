@@ -131,6 +131,7 @@
 		<a 	href="<c:url value="/post/insert?co_num=${pm.cri.co_num}"/>" 
 			class="btn btn-outline-info btn-insert">글등록</a>
 	</c:if>	
+	
 	<script type="text/javascript">
 		$('.btn-insert').click(function(e){
 			if('' != '${user.me_id}'){
