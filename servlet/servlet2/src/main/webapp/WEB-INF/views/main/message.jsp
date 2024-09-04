@@ -6,11 +6,13 @@
 <head>
 </head>
 <body>
-<div class="jumbotron">
-	<div class="container">
-		<h1>Bootstrap Tutorial</h1>
-		<p>Bootstrap is the most popular HTML, CSS...</p>
-	</div>
-</div>
+<script type="text/javascript">
+	var url = '<c:url value="${url}"/>';
+	var msg = '${msg}';
+	if(msg != ''){
+		alert(msg);
+	}
+	location.href = url;
+</script>
 </body>
 </html>
