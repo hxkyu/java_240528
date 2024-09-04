@@ -5,12 +5,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<title>홈페이지</title>
 </head>
 <body>
-<div class="jumbotron jumbotron-fluid mb-0">
-  <div class="container">
-    <h1>푸터</h1>
-  </div>
-</div>
+<script type="text/javascript">
+if('${msg}' != ''){
+	alert('${msg}');
+}
+if('${url}' != ''){
+	location.href = '<c:url value="${url}"/>';
+}
+</script>
 </body>
 </html>
