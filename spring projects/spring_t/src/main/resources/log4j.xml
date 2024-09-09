@@ -31,9 +31,10 @@
 	<logger name="org.springframework.web">
 		<level value="info" />
 	</logger>
+
 	<logger name="jdbc.sqlonly" additivity="false"> 
-	<level value="info"/> 
-	<appender-ref ref="console"/> 
+		<level value="info"/> 
+		<appender-ref ref="console"/> 
 	</logger>
 	<logger name="jdbc.sqltiming" additivity="false">
 		<level value="warn" />
@@ -53,6 +54,7 @@
 		<level value="info"/>  
 		<appender-ref ref="console"/> 
 	</logger> 
+	
 	<!-- Root Logger -->
 	<root>
 		<priority value="warn" />

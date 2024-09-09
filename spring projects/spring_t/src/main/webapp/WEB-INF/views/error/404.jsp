@@ -3,8 +3,9 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+<head>
+</head>
 <body>
 <h1>접근할 수 없는 페이지입니다.</h1>
-
 </body>
 </html>

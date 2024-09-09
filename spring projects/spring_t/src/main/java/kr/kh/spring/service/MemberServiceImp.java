@@ -160,7 +160,7 @@ public class MemberServiceImp implements MemberService {
 			return memberDao.updateMember(member);
 		}catch(Exception e) {
 			return false;
+		}
 	}
 	
-}
 }

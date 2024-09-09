@@ -18,11 +18,11 @@
 </head>
 <body>
 	
-	<h1>마이페이지</h1>
+	<h1>마이 페이지</h1>
 	<form action="<c:url value="/mypage"/>" method="post" id="form">
 		<div class="form-group">
 			<label for="id">아이디:</label>
-			<input type="text" class="form-control" id="id" name="me_id" value="${user.me_id}" readonly>
+			<input type="text" class="form-control" id="id" name="me_id" value="${user.me_id }" readonly>
 		</div>
 		<div class="form-group">
 			<label for="pw">비번:</label>
@@ -34,9 +34,9 @@
 		</div>
 		<div class="form-group">
 			<label for="email">이메일:</label>
-			<input type="text" class="form-control" id="email" name="me_email"  value="${user.me_email}">
+			<input type="text" class="form-control" id="email" name="me_email" value="${user.me_email}">
 		</div>
-		<button type="submit" class="btn btn-outline-success col-12">회원정보 수정</button>
+		<button type="submit" class="btn btn-outline-success col-12">회원 정보 수정</button>
 	</form>
 	<script type="text/javascript">
 	$('#form').validate({
@@ -65,7 +65,6 @@
 			}
 		},
 		submitHandler : function(){
-
 			return true;
 		}
 	});
@@ -74,46 +73,6 @@
 		return this.optional(element) || re.test(value);
 	}, "정규표현식을 확인하세요.");
 	
-	</script>
-	<script type="text/javascript">
-		/**
-		@return 1이면 사용 가능, 0이면 사용 불가능, -1이면 전송하지 않음
-		*/
-		function checkId(id){
-			//정규표현식 확인
-			var regex = /^\w{6,13}$/;
-			if(!regex.test(id)){
-				return -1;
-			}
-			var res = 0;
-			//맞으면 서버에 확인 요청
-			$.ajax({
-				async : false,
-				url : '<c:url value="/check/id"/>', 
-				type : 'get', 
-				data : {
-					id : id
-				}, 
-				success : function (data){
-					res = data? 1 : 0;
-				}, 
-				error : function(jqXHR, textStatus, errorThrown){
-
-				}
-			});
-			return res;
-		}
-		function displayCheckId(result){
-			$('#check-id').remove();
-			
-			if(result == 1){
-				var str = `<label id="check-id" class="id-ok error">사용 가능한 아이디입니다.</label>`;
-				$('#id').after(str);
-			}else if(result == 0){
-				var str = `<label id="check-id" class="error">이미 사용중인 아이디입니다.</label>`;
-				$('#id').after(str);
-			}
-		}
 	</script>
 </body>
 </html>

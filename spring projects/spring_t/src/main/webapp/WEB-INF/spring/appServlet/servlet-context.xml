@@ -96,5 +96,6 @@
 			<mapping path="/**"/>
 			<beans:ref bean="autoLoginInterceptor"/>
 		</interceptor>
+		
 	</interceptors>
 </beans:beans>
