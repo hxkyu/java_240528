@@ -34,8 +34,11 @@
 			<c:forEach items="${list}" var="file">
 				<a href="<c:url value="/download${file.fi_name}"/>" class="form-control" download="${file.fi_ori_name}">${file.fi_ori_name}</a>
 			</c:forEach>
-			<a href="<c:url value="/post/update/${post.po_num}"/>">수정</a>
 		</div>
+		<c:if test="${post.po_me_id == user.me_id }">
+			<a href="<c:url value="/post/update/${post.po_num}"/>" class="btn btn-outline-info">수정</a>
+			<a href="<c:url value="/post/delete/${post.po_co_num}/${post.po_num}"/>" class="btn btn-outline-info">삭제</a>
+		</c:if>
 	</div>
 </body>
 </html>

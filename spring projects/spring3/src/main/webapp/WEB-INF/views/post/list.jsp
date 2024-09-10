@@ -115,13 +115,14 @@
 		</form>
 		<a href="<c:url value="/post/insert/${pm.cri.co_num}"/>" class="btn btn-outline-info btn-insert">글쓰기</a>
 	</c:if>
+	
 	<script type="text/javascript">
 		$('.btn-insert').click(function(e){
 			if('${user.me_id}' != ''){
 				return;
 			}
 			e.preventDefault();
-			if(confirm('로그인이 필요한 서비스입니다. \n로그인 페이지로 이동하겠습니까?')){
+			if(confirm('로그인이 필요한 서비스입니다.\n로그인 페이지로 이동하겠습니까?')){
 				location.href = "<c:url value="/guest/login"/>"
 			}
 		});
