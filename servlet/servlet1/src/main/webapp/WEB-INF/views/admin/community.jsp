@@ -66,7 +66,7 @@ $('.btn-update').click(function(){
 	var num = $(this).data('num');
 	var name = $(this).prev().text();
 	var str = `
-	<form class="input-group mb-3" action="<c:url value="/admin/community/update"/>" method="post" id="form-update">
+	<form class="input-group mb-3" action="<c:url value="/admin/community/update"/>" method="post" id="form_update">
 		<input type="text" name="co_name" class="form-control" value="\${name}">
 		<div class="input-group-append">
 			<button type="submit" class="btn btn-outline-success">수정</button>
@@ -76,6 +76,7 @@ $('.btn-update').click(function(){
 	`;
 	$('#form_insert').hide();
 	$('#form_insert').after(str);
+	
 });
 </script>
 </body>

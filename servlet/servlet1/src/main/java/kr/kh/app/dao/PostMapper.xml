@@ -129,12 +129,12 @@
 	<select id="selectFileList" resultType="FileVO">
 		select * from file where fi_po_num = #{po_num}
 	</select>
-	<select id="selectFile" resultType="FileVO">
-		select form file where fi_num = #{fi_num}
+	<select id="selectFile"  resultType="FileVO">
+		select * from file where fi_num = #{fi_num}
 	</select>
-	<select id="deleteFile" resultType="FileVO">
-		delete form file where fi_num = #{fi_num}
-	</select>
+	<delete id="deleteFile">
+		delete from file where fi_num = #{fi_num}
+	</delete>
 	
 	<insert id="insertCommunity">
 		insert into community(co_name) values(#{co_name})

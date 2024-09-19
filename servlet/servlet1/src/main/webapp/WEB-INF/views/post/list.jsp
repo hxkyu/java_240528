@@ -60,10 +60,8 @@
 								<c:when test="${post.po_down == 0}">0</c:when>
 								<c:otherwise>-${post.po_down}</c:otherwise>
 							</c:choose>
-							
 						</c:otherwise>
 					</c:choose>
-					
 					</td>
 					<td>${post.po_view }</td>
 				</tr>

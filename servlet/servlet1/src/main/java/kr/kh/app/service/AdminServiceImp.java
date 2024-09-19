@@ -55,5 +55,4 @@ public class AdminServiceImp implements AdminService {
 		}
 		return postDao.updateCommunity(co_num, co_name);
 	}
-
 }

@@ -1,7 +1,6 @@
 package kr.kh.app.controller;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,10 +15,9 @@ import kr.kh.app.service.AdminServiceImp;
 @WebServlet("/admin/community/update")
 public class AdminCommunityUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private AdminService adminService = new AdminServiceImp();
-
+	private AdminService adminService = new AdminServiceImp();   
+  
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		//커뮤니티 번호를 가져옴
 		String num = request.getParameter("co_num");
 		//수정될 커뮤니티 명
@@ -40,7 +38,5 @@ public class AdminCommunityUpdate extends HttpServlet {
 		}
 		request.setAttribute("url", "/admin/community");
 		request.getRequestDispatcher("/WEB-INF/views/message.jsp").forward(request, response);
-			
 	}
-
 }

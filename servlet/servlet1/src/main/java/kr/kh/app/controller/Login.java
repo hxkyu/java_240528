@@ -33,7 +33,6 @@ public class Login extends HttpServlet {
 		
 		//LoginDTO객체를 서비스에게 주면서 일치하는 회원 정보를 가져오라고 요청
 		MemberVO user = memberService.login(member);
-		System.out.println("야!");
 		
 		//가져온 회원정보가 null이면 msg에 로그인 실패!, url은 /login을 화면에 전송. 화면은 message.jsp
 		if(user == null) {
